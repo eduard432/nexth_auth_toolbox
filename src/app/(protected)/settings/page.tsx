@@ -7,7 +7,9 @@ const SettingsPage = async () => {
         <form action={async () => {
             "use server"
 
-            await signOut()
+            await signOut({
+                redirectTo: "/auth/login"
+            })
         }}>
             <button className="bg-black text-white px-2 py-1" type="submit" >
                 Sign Out
